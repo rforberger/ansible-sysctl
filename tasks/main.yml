@@ -1,0 +1,15 @@
+---
+
+- name: Enable value
+  ansible.posix.sysctl:
+    name: "{{ item.name }}"
+    state: present
+    value: "{{ item.value }}"
+  loop: "{{ sysctl }}"
+
+
+
+
+
+
+
